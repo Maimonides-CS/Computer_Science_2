@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Integer_while_loop {
+  public static void main(String[] args) {
+
+    int power2 = 1;
+    int j=1;
+    System.out.println("Integer.MAX_VALUE: " + Integer.MAX_VALUE);
+    System.out.println("Integer.MIN_VALUE: " + Integer.MIN_VALUE);
+    while ((power2 <= Integer.MAX_VALUE)&&(j< 100))
+    {
+        System.out.print(power2 + " ");
+        power2 *= 2;
+        j++;
+    }
+
+   }
+}
