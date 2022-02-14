@@ -9,15 +9,22 @@ public class Compare_Name {
     this.x = x;  // Set the initial value for the class attribute x
     this.y = y;
   }
+  
+  public String toString()
+  {
+  return "(" + this.x + ", " + this.y + ")";
+  }
+
 
   public boolean equals(Compare_Name name3)
   {
-    if (this.x!=name3.x) return false;
+    if ((this.x!=name3.x)||(this.y!=name3.y)) return false;
     return true;
   }
   public static void main(String[] args)  {
     Compare_Name name1= new Compare_Name(1, "hello");
-    Compare_Name name2= new Compare_Name(2, "hello");
+    Compare_Name name2= new Compare_Name(1, "hello");
     System.out.println(name1.equals(name2));
+    System.out.println(name1);
   }
 }
