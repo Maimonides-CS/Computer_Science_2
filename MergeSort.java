@@ -3,8 +3,8 @@ public class MergeSort {
     private int[] temp = new int[8];
     public static void main(String[] args) {
         
-
-       
+       MergeSort instance = new MergeSort();
+       instance.divide(0, 7);
     }
 
     public void Combine(int low, int middle, int high) {
@@ -45,13 +45,14 @@ public class MergeSort {
     }
 
     public void divide (int low, int high) {
-        if ((high-low) == 1) {
-            Combine();
-        }
         int mid = (high+low)/2;
+        if ((high-low) == 1) {
+            Combine(low, mid, high);
+        }
+        //int mid = (high+low)/2;
         divide(low, mid);
         divide(mid+1, high);
-
+        //Combine(low, mid, high);
     }
 
 
