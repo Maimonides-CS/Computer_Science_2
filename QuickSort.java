@@ -23,16 +23,16 @@ public class QuickSort {
     public static void  quicksort(int low, int high) {
         System.out.println("low: " +low + " high: " + high);
 
-       
+         if (low < high) {
             int index = partition(low, high);
             System.out.println("index: " + index);
-            if (low < index-1) {
+            //if (low < index-1) {
             quicksort(low, index-1);
-            }
-            if (index <high) {
+            //}
+            //if (index <high) {
             quicksort(index, high);
+            //}
             }
-        
 
     }
 
